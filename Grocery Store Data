@@ -1,0 +1,21 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, quantity INTEGER);
+
+INSERT INTO store VALUES (1, "avocado", "produce", 1.00, 4);
+INSERT INTO store VALUES (2, "wipes", "hygiene", 2.50, 2);
+INSERT INTO store VALUES (3, "napkins", "home", 3.00, 1);
+INSERT INTO store VALUES (4, "banana", "produce", .25, 6);
+INSERT INTO store VALUES (5, "bread", "pantry", 2.25, 2);
+INSERT INTO store VALUES (6, "bottled water", "pantry", 5.00, 1);
+INSERT INTO store VALUES (7, "beef", "meat", 4.25, 2);
+INSERT INTO store VALUES (8, "garlic", "produce", 1.75, 1); 
+INSERT INTO store VALUES (9, "plates", "home", 2.00, 1);
+INSERT INTO store VALUES (10, "corn", "produce", .30, 6);
+INSERT INTO store VALUES (11, "soap", "hygiene", 2.00, 1);
+INSERT INTO store VALUES (12, "chicken", "meat", 4.00, 2);
+INSERT INTO store VALUES (13, "lotion", "beauty", 3.25, 1);
+INSERT INTO store VALUES (14, "pasta", "pantry", 1.75, 2);
+INSERT INTO store VALUES (15, "salad", "produce", 4.00, 2);
+
+SELECT * FROM store ORDER BY price asc;
+SELECT AVG (price) "avg produce item price" FROM store
+where section='produce';
